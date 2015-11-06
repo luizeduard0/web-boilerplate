@@ -8,7 +8,8 @@ A boilerplate for building React and Redux apps with ES6 and Browserify
 
 ## How to build?
 
-`gulp build`
+- Production: `gulp build`
+- Development: `gulp build-dev` or `gulp watch`
 
 ## How to run?
 

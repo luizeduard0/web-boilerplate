@@ -1,13 +1,11 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Router } from 'react-router';
 import store from './store';
-import history from './history'
-import routes from './routes';
+import router from './router';
 
 const provider = (
   <Provider store={store}>
-    <Router history={history} routes={routes} />
+    {router}
   </Provider>
 );
 

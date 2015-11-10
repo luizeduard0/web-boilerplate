@@ -5,10 +5,10 @@ fetch.Promise = Promise;
 
 export function callAPI(type, path, params) {
   if (['get', 'post', 'put', 'delete'].indexOf(type) === -1) {
-    throw 'Invalid type';
+    throw new Error('Invalid type');
   }
   if (!path) {
-    throw 'Invalid path';
+    throw new Error('Invalid path');
   }
   const { protocol, hostname } = location;
   return fetch(`${protocol}//${hostname}/api${path}`, {
@@ -17,7 +17,7 @@ export function callAPI(type, path, params) {
   })
   .then(res => {
     if (!res.ok) {
-      throw res.status;
+      throw new Error(res.status);
     }
     return res.json();
   });

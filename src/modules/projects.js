@@ -32,23 +32,9 @@ export default function reducer(state = initialState, action) {
   return state;
 }
 
-export function loadProjectsRequest() {
-  return { type: 'LOAD_PROJECTS_REQUEST' };
-}
-
-export function loadProjectsSuccess(data) {
-  return { type: 'LOAD_PROJECTS_SUCCESS', payload: data };
-}
-
-export function loadProjectsFailure(errorMessage) {
-  return { type: 'LOAD_PROJECTS_FAILURE', payload: new Error(errorMessage), error: true };
-}
-
 export function loadProjects() {
-  return dispatch => {
-    dispatch(loadProjectsRequest());
-    return callAPI('get', '/projects.json')
-      .then(data => dispatch(loadProjectsSuccess(data)))
-      .catch(() => dispatch(loadProjectsFailure('Failed to load projects')));
+  return {
+    type: 'LOAD_PROJECTS',
+    promise: callAPI('get', '/projects.json')
   };
 }

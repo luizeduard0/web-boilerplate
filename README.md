@@ -1,4 +1,4 @@
-# Reat Redux
+# React Redux
 
 A boilerplate for building React and Redux apps with ES6 and Browserify
 

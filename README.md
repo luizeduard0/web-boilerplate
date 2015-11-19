@@ -1,4 +1,4 @@
-# React Redux
+# Reax
 
 A framework for building React and Redux apps with ES6.
 

@@ -1,6 +1,10 @@
 # React Redux
 
-A boilerplate for building React and Redux apps with ES6 and Browserify
+A framework for building React and Redux apps with ES6.
+
+## Project Status
+
+At the moment you can use this project as a boilerplate for your React/Redux apps, it's stable. We are writing some useful HOCs (High Order Components) that will transform this boilerplate in a real framework.
 
 ## How to install?
 

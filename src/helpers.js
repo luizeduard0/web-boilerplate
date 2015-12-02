@@ -1,24 +1,25 @@
-import fetch from 'node-fetch';
 import Promise from 'promise';
+import request from 'superagent';
 
-fetch.Promise = Promise;
-
-export function callAPI(type, path, params) {
+export const callAPI = (type, path, params) => {
   if (['get', 'post', 'put', 'delete'].indexOf(type) === -1) {
     throw new Error('Invalid type');
   }
   if (!path) {
     throw new Error('Invalid path');
   }
-  const { protocol, hostname } = location;
-  return fetch(`${protocol}//${hostname}/api${path}`, {
-    method: type.toUpperCase(),
-    body: params ? JSON.stringify(params) : null
+  return new Promise((resolve, reject) => {
+    return request[type](`/api/${path}`)[type === 'get' ? 'query' : 'send'](params).end((error, response) => {
+      if (error) {
+        return reject(error);
+      }
+      return resolve(response);
+    });
   })
-  .then(res => {
-    if (!res.ok) {
-      throw new Error(res.status);
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(response.status);
     }
-    return res.json();
+    return response.body;
   });
-}
+};

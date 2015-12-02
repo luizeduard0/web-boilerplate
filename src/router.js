@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router } from 'react-router';
-import history from './history'
-import routes from './routes';
+import history from './history.js'
+import routes from './routes.js';
 
 const router = <Router history={history} routes={routes} />;
 

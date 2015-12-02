@@ -1,13 +1,13 @@
-import AppContainer from './containers/AppContainer';
-import ProjectsContainer from './containers/ProjectsContainer';
+import App from './modules/app/components/App.js';
+import Projects from './modules/projects/containers/Projects.js';
 
 const routes = [
   {
     path: '/',
-    component: AppContainer,
-    indexRoute: { component: ProjectsContainer },
+    component: App,
+    indexRoute: { component: Projects },
     childRoutes: [
-      { path: 'projects', component: ProjectsContainer }
+      { path: 'projects', component: Projects }
     ]
   }
 ];

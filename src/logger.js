@@ -1,7 +1,7 @@
 import createLogger from 'redux-logger';
 
 const logger = createLogger({
-  predicate: () => true
+  predicate: () => __DEV__
 });
 
 export default logger;

@@ -1,6 +1,6 @@
 {
   "name": "@hnordt/reax",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "scripts": {
     "build": "webpack -p",
     "build-dev": "set BUILD_DEV=1 && webpack-dev-server --content-base public/ --inline"

@@ -15,3 +15,9 @@ A boilerplate for building React and Redux apps with ES6
 ### Development
 
 `BUILD_DEV=1 webpack-dev-server --content-base public/ --inline`
+
+## How to run?
+
+### Production
+
+`PORT=80 node server.js`

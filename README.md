@@ -14,4 +14,4 @@ A boilerplate for building React and Redux apps with ES6
 
 ### Development
 
-`BUILD_DEV=1 webpack-dev-server --content-base public/ --inline`
+`BUILD_DEV=1 webpack-dev-server --content-base public/ --inline --history-api-fallback`

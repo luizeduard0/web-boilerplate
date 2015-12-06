@@ -11,15 +11,9 @@ export const callAPI = (type, path, params) => {
   return new Promise((resolve, reject) => {
     return request[type](`/api/${path}`)[type === 'get' ? 'query' : 'send'](params).end((error, response) => {
       if (error) {
-        return reject(error);
+        return reject(error.response.body);
       }
-      return resolve(response);
+      return resolve(response.body);
     });
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(response.status);
-    }
-    return response.body;
   });
 };

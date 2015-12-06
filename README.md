@@ -10,8 +10,8 @@ A boilerplate for building React and Redux apps with ES6
 
 ### Production
 
-`npm run build`
+`webpack -p`
 
 ### Development
 
-`npm run build-dev`
+`BUILD_DEV=1 webpack-dev-server --content-base public/ --inline`

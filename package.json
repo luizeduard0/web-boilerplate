@@ -1,10 +1,6 @@
 {
   "name": "@hnordt/reax",
-  "version": "1.2.0",
-  "scripts": {
-    "build": "webpack -p",
-    "build-dev": "set BUILD_DEV=1 && webpack-dev-server --content-base public/ --inline"
-  },
+  "version": "1.2.1",
   "dependencies": {
     "history": "^1.13.0",
     "lodash": "^3.10.1",

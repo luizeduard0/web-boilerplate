@@ -1,6 +1,9 @@
 import React, { PropTypes } from 'react';
 
-const Project = ({ name, version }) => (
+const Project = ({
+  name,
+  version
+}) => (
   <tr>
     <td>{name}</td>
     <td>{version}</td>

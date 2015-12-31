@@ -5,9 +5,14 @@ const routes = [
   {
     path: '/',
     component: App,
-    indexRoute: { component: Projects },
+    indexRoute: {
+      component: Projects
+    },
     childRoutes: [
-      { path: 'projects', component: Projects }
+      {
+        path: 'projects',
+        component: Projects
+      }
     ]
   }
 ];

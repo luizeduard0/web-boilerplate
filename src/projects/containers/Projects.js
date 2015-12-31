@@ -5,9 +5,7 @@ import ProjectPanel from '../components/ProjectPanel.js';
 
 const AsyncProjectPanel = Async(ProjectPanel);
 
-const Projects = ({
-  projectsFetch
-}) => (
+const Projects = ({ projectsFetch }) => (
   <AsyncProjectPanel
     projects={projectsFetch.value}
     isLoading={projectsFetch.pending}

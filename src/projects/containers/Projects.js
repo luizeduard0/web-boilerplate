@@ -1,34 +1,19 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import loadProjects from '../actions/loadProjects.js';
-import Spinner from '@hnordt/reax-spinner';
-import Alert from '@hnordt/reax-alert';
+import { connect, PromiseState } from 'react-refetch';
+import Async from '@hnordt/reax-async';
 import ProjectPanel from '../components/ProjectPanel.js';
 
-class Projects extends React.Component {
-  componentDidMount() {
-    this.props.dispatch(loadProjects());
-  }
-  render() {
-    const {
-      projects,
-      isLoading,
-      errorMessage
-    } = this.props;
-    if (isLoading) {
-      return <Spinner />;
-    }
-    if (errorMessage) {
-      return <Alert type="danger">{errorMessage}</Alert>;
-    }
-    return <ProjectPanel projects={projects} />;
-  }
-}
+const AsyncProjectPanel = Async(ProjectPanel);
 
-const mapStateToProps = state => ({
-  projects: state.projects.data,
-  isLoading: state.projects.isLoading,
-  errorMessage: state.projects.errorMessage
-});
+const Projects = ({
+  projectsFetch
+}) => (
+  <AsyncProjectPanel
+    projects={projectsFetch.value}
+    isLoading={projectsFetch.pending}
+    error={projectsFetch.reason} />
+);
 
-export default connect(mapStateToProps)(Projects);
+export default connect(() => ({
+  projectsFetch: '/api/projects.json'
+}))(Projects);

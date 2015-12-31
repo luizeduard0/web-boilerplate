@@ -20,7 +20,12 @@ const ProjectPanel = ({ projects }) => (
         </tr>
       </thead>
       <tbody>
-        {projects.map(({ name, version }) => <Project key={name} name={name} version={version} />)}
+        {projects.map(({ name, version }) => (
+          <Project
+            key={name}
+            name={name}
+            version={version} />
+        ))}
       </tbody>
     </table>
   </Panel>

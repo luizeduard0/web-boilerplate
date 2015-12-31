@@ -1,4 +1,4 @@
-import { callAPI } from '../../../helpers.js';
+import { callAPI } from '../../helpers.js';
 
 const loadProjects = () => ({
   type: 'LOAD_PROJECTS',

@@ -1,7 +1,14 @@
 {
   "name": "@hnordt/reax",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "dependencies": {
+    "@hnordt/reax-alert": "^1.0.2",
+    "@hnordt/reax-button": "^1.0.3",
+    "@hnordt/reax-container": "^1.0.0",
+    "@hnordt/reax-icon": "^1.0.2",
+    "@hnordt/reax-panel": "^1.1.1",
+    "@hnordt/reax-panel-body": "^1.0.3",
+    "@hnordt/reax-spinner": "^1.0.0",
     "express": "^4.13.3",
     "history": "^1.13.0",
     "lodash": "^3.10.1",

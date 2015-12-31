@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import Panel from '@hnordt/reax-panel';
+import PanelBody from '@hnordt/reax-panel-body';
+import Button from '@hnordt/reax-button';
+import Icon from '@hnordt/reax-icon';
 import Project from '../components/Project.js';
 
 const ProjectPanel = ({ projects }) => (
-  <div className="panel panel-default">
-    <div className="panel-heading">
-      Projects
-    </div>
-    <div className="panel-body">
-      <button className="btn btn-success" type="button" onClick={() => alert('Not implemented yet')}>
-        <span className="glyphicon glyphicon-plus" />
-      </button>
-    </div>
+  <Panel title="Project">
+    <PanelBody>
+      <Button type="success" onClick={() => alert('Not implemented yet')}>
+        <Icon name="plus" />
+      </Button>
+    </PanelBody>
     <table className="table table-striped table-hover">
       <thead>
         <tr>
@@ -22,11 +23,11 @@ const ProjectPanel = ({ projects }) => (
         {projects.map(({ name, version }) => <Project key={name} name={name} version={version} />)}
       </tbody>
     </table>
-  </div>
+  </Panel>
 );
 
 ProjectPanel.propTypes = {
-  projects: React.PropTypes.array.isRequired
+  projects: PropTypes.array.isRequired
 };
 
 export default ProjectPanel;

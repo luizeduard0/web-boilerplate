@@ -1,5 +1,5 @@
-import App from './modules/app/components/App.js';
-import Projects from './modules/projects/containers/Projects.js';
+import App from './app/components/App.js';
+import Projects from './projects/containers/Projects.js';
 
 const routes = [
   {

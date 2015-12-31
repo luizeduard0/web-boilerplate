@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import loadProjects from '../actions/loadProjects.js';
-import Spinner from '../../core/components/Spinner.js';
-import Alert from '../../core/components/Alert.js';
+import Spinner from '@hnordt/reax-spinner';
+import Alert from '@hnordt/reax-alert';
 import ProjectPanel from '../components/ProjectPanel.js';
 
 class Projects extends React.Component {

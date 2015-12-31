@@ -1,6 +1,6 @@
 {
   "name": "@hnordt/reax",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "A boilerplate for building React apps with ES6",
   "homepage": "https://hnordt.github.io/reax",
   "bugs": {
@@ -13,12 +13,20 @@
     "url": "https://github.com/hnordt/reax.git"
   },
   "dependencies": {
-    "@hnordt/reax-async": "^1.0.0",
+    "@hnordt/reax-async": "^1.0.1",
     "@hnordt/reax-button": "^1.0.3",
+    "@hnordt/reax-col": "^1.0.1",
     "@hnordt/reax-container": "^1.0.0",
+    "@hnordt/reax-form": "^1.0.3",
+    "@hnordt/reax-form-group": "^1.0.1",
     "@hnordt/reax-icon": "^1.0.2",
+    "@hnordt/reax-input": "^1.0.3",
+    "@hnordt/reax-label": "^1.0.1",
     "@hnordt/reax-panel": "^1.1.1",
     "@hnordt/reax-panel-body": "^1.0.3",
+    "@hnordt/reax-row": "^1.0.1",
+    "@hnordt/reax-spinner": "^1.0.0",
+    "@hnordt/reax-validator": "^1.0.0",
     "express": "^4.13.3",
     "history": "^1.17.0",
     "react": "^0.14.5",

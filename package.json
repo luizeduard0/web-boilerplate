@@ -1,6 +1,6 @@
 {
   "name": "@hnordt/reax",
-  "version": "1.5.1",
+  "version": "2.0.0",
   "description": "A boilerplate for building React apps with ES6",
   "homepage": "https://hnordt.github.io/reax",
   "bugs": {
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@hnordt/reax-alert": "^1.0.2",
+    "@hnordt/reax-api": "^1.0.1",
     "@hnordt/reax-async": "^1.0.1",
     "@hnordt/reax-button": "^1.0.3",
     "@hnordt/reax-col": "^1.0.1",
@@ -32,13 +33,11 @@
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
     "react-redux": "^4.0.6",
-    "react-refetch": "^0.6.0",
     "react-router": "^2.0.0-rc4",
     "redux": "^3.0.5",
     "redux-form": "^4.0.7",
     "redux-logger": "^2.3.1",
-    "redux-thunk": "^1.0.3",
-    "whatwg-fetch": "^0.10.1"
+    "redux-thunk": "^1.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.2.0",

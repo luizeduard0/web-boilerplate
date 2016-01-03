@@ -1,6 +1,6 @@
 {
   "name": "@hnordt/reax",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "A boilerplate for building React apps with ES6",
   "homepage": "https://hnordt.github.io/reax",
   "bugs": {
@@ -13,6 +13,7 @@
     "url": "https://github.com/hnordt/reax.git"
   },
   "dependencies": {
+    "@hnordt/reax-alert": "^1.0.2",
     "@hnordt/reax-async": "^1.0.1",
     "@hnordt/reax-button": "^1.0.3",
     "@hnordt/reax-col": "^1.0.1",

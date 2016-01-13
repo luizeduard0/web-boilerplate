@@ -1,6 +1,6 @@
 {
   "name": "@hnordt/reax",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A boilerplate for building React apps with ES6",
   "homepage": "https://hnordt.github.io/reax",
   "bugs": {

@@ -38,10 +38,8 @@ export default reduxForm(
   {
     form: 'project',
     fields: ['name'],
-    validate: ({ name }) => {
-      return {
-        name: isEmpty(name) && 'Required'
-      };
-    }
+    validate: ({ name }) => ({
+      name: isEmpty(name) && 'Required'
+    })
   }
 )(ProjectForm);

@@ -1,18 +1,18 @@
-import App from './app/components/App.js';
-import Projects from './projects/containers/Projects.js';
-import NotFound from './app/components/NotFound.js';
+import App from './app/App.js';
+import ProjectsContainer from './projects/ProjectsContainer.js';
+import NotFound from './app/NotFound.js';
 
 const routes = [
   {
     path: '/',
     component: App,
     indexRoute: {
-      component: Projects
+      component: ProjectsContainer
     },
     childRoutes: [
       {
         path: 'projects',
-        component: Projects
+        component: ProjectsContainer
       },
       {
         path: '*',

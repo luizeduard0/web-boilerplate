@@ -1,10 +1,10 @@
 {
-  "name": "@hnordt/reax",
+  "name": "@hnordt/reax-redux-boilerplate",
   "version": "3.0.0",
-  "description": "A boilerplate for building React apps with ES6",
-  "homepage": "https://hnordt.github.io/reax",
+  "description": "Redux boilerplate for React",
+  "homepage": "https://hnordt.github.io/reax-redux-boilerplate",
   "bugs": {
-    "url": "https://github.com/hnordt/reax/issues"
+    "url": "https://github.com/hnordt/reax-redux-boilerplate/issues"
   },
   "license": "MIT",
   "author": "Héliton Nordt <hnordt@hnordt.com> (https://github.com/hnordt)",

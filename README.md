@@ -1,6 +1,6 @@
 # Reax
 
-A boilerplate for building React apps with ES6
+Redux boilerplate for React
 
 ## Install
 

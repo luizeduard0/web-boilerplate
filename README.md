@@ -1,4 +1,4 @@
-# Reax
+# Reax Redux Boilerplate
 
 Redux boilerplate for React
 

@@ -5,7 +5,7 @@ import PanelBody from '@hnordt/reax-panel-body';
 import Form from '@hnordt/reax-form';
 import FormGroup from '@hnordt/reax-form-group';
 import Label from '@hnordt/reax-label';
-import Input from '@hnordt/reax-input';
+import TextInput from '@hnordt/reax-input';
 import Button from '@hnordt/reax-button';
 import Spinner from '@hnordt/reax-spinner';
 import { isEmpty } from '@hnordt/reax-validator';
@@ -24,7 +24,7 @@ const ProjectForm = ({
       })}>
         <FormGroup error={name.touched && name.error}>
           <Label>Name</Label>
-          <Input {...name} disabled={submitting} />
+          <TextInput {...name} disabled={submitting} />
         </FormGroup>
         <Button type="primary" submit disabled={submitting}>
           {submitting ? <Spinner /> : 'Save'}

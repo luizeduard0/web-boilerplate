@@ -1,9 +1,17 @@
-import { applyMiddleware, createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import logger from './logger.js';
+import createLogger from 'redux-logger';
 import rootReducer from './rootReducer.js';
 
-const createStoreWithMiddleware = applyMiddleware(thunk, logger)(createStore);
-const store = createStoreWithMiddleware(rootReducer);
+const store = createStore(
+  rootReducer,
+  applyMiddleware(
+    thunk,
+    createLogger({
+      duration: true,
+      predicate: () => __DEV__
+    })
+  )
+);
 
 export default store;

@@ -3,7 +3,7 @@ import Panel from '@hnordt/reax-panel';
 import PanelBody from '@hnordt/reax-panel-body';
 import Button from '@hnordt/reax-button';
 import Icon from '@hnordt/reax-icon';
-import Project from './Project.js';
+import Project from './Project';
 
 const ProjectPanel = ({ projects }) => (
   <Panel title="Project">

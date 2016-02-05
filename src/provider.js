@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from './store.js';
-import router from './router.js';
+import store from './store';
+import router from './router';
 
 const provider = (
   <Provider store={store}>

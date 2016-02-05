@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import Async from '@hnordt/reax-async';
 import Row from '@hnordt/reax-row';
 import Col from '@hnordt/reax-col';
-import ProjectPanel from './ProjectPanel.js';
-import ProjectForm from './ProjectForm.js';
+import ProjectPanel from './ProjectPanel';
+import ProjectForm from './ProjectForm';
 
 const AsyncProjectPanel = Async(ProjectPanel);
 

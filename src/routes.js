@@ -1,6 +1,6 @@
-import App from './app/App.js';
-import ProjectsContainer from './projects/ProjectsContainer.js';
-import NotFound from './app/NotFound.js';
+import App from './app/App';
+import ProjectsContainer from './projects/ProjectsContainer';
+import NotFound from './app/NotFound';
 
 const routes = [
   {

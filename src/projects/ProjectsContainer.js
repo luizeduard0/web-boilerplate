@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { mapAPIStateToProps, callAPI } from '@hnordt/reax-api';
-import Projects from './Projects.js';
+import Projects from './Projects';
 
 class ProjectsContainer extends Component {
   componentDidMount() {

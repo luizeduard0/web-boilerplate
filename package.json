@@ -1,6 +1,6 @@
 {
   "name": "@hnordt/reax-redux-boilerplate",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Redux boilerplate for React",
   "homepage": "https://hnordt.github.io/reax-redux-boilerplate",
   "bugs": {

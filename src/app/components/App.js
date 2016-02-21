@@ -1,7 +1,9 @@
 import React, { PropTypes } from 'react'
 import Container from '@hnordt/reax-container'
 
-const App = ({ children }) => <Container>{children}</Container>
+function App({ children }) {
+  return <Container>{children}</Container>
+}
 
 App.propTypes = {
   children: PropTypes.node.isRequired

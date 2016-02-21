@@ -9,7 +9,7 @@ const store = createStore(
     thunk,
     createLogger({
       duration: true,
-      predicate: () => __DEV__
+      predicate: () => process.env.NODE_ENV !== 'production'
     })
   )
 )

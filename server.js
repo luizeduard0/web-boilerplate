@@ -1,10 +1,10 @@
 const express = require('express')
-const path = require('path')
 
 const app = express()
-app.use(express.static(path.resolve(__dirname, 'public')))
-app.get('*', function (request, response) {
-  response.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+app.use(express.static(__dirname + '/public'))
+
+app.get('*', function (req, res) {
+  res.sendFile(__dirname + '/public/index.html')
 })
 
 const port = process.env.PORT || 80

@@ -14,12 +14,12 @@ npm install
 ### Production
 
 ```sh
-webpack -p
-PORT=80 node server.js
+NODE_ENV=production webpack -p
+PORT=3000 node server.js
 ```
 
 ### Development
 
 ```sh
-BUILD_DEV=1 webpack-dev-server --content-base public/ --inline --history-api-fallback
+webpack-dev-server --content-base public/ --inline --history-api-fallback --port 3000
 ```

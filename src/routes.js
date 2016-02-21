@@ -1,6 +1,6 @@
-import App from './app/App';
-import ProjectsContainer from './projects/ProjectsContainer';
-import NotFound from './app/NotFound';
+import App from './app/App'
+import ProjectsContainer from './projects/ProjectsContainer'
+import NotFound from './app/NotFound'
 
 const routes = [
   {
@@ -20,6 +20,6 @@ const routes = [
       }
     ]
   }
-];
+]
 
-export default routes;
+export default routes

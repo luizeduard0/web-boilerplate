@@ -1,9 +1,9 @@
-import React, { PropTypes } from 'react';
-import Panel from '@hnordt/reax-panel';
-import PanelBody from '@hnordt/reax-panel-body';
-import Button from '@hnordt/reax-button';
-import Icon from '@hnordt/reax-icon';
-import Project from './Project';
+import React, { PropTypes } from 'react'
+import Panel from '@hnordt/reax-panel'
+import PanelBody from '@hnordt/reax-panel-body'
+import Button from '@hnordt/reax-button'
+import Icon from '@hnordt/reax-icon'
+import Project from './Project'
 
 const ProjectPanel = ({ projects }) => (
   <Panel title="Project">
@@ -30,10 +30,10 @@ const ProjectPanel = ({ projects }) => (
       </tbody>
     </table>
   </Panel>
-);
+)
 
 ProjectPanel.propTypes = {
   projects: PropTypes.array.isRequired
-};
+}
 
-export default ProjectPanel;
+export default ProjectPanel

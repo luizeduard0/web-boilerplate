@@ -1,6 +1,6 @@
-import React from 'react';
-import Alert from '@hnordt/reax-alert';
+import React from 'react'
+import Alert from '@hnordt/reax-alert'
 
-const NotFound = () => <Alert type="danger">Not Found</Alert>;
+const NotFound = () => <Alert type="danger">Not Found</Alert>
 
-export default NotFound;
+export default NotFound

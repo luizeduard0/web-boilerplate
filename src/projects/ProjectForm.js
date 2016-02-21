@@ -1,14 +1,14 @@
-import React from 'react';
-import { reduxForm } from 'redux-form';
-import Panel from '@hnordt/reax-panel';
-import PanelBody from '@hnordt/reax-panel-body';
-import Form from '@hnordt/reax-form';
-import FormGroup from '@hnordt/reax-form-group';
-import Label from '@hnordt/reax-label';
-import TextInput from '@hnordt/reax-text-input';
-import Button from '@hnordt/reax-button';
-import Spinner from '@hnordt/reax-spinner';
-import { isEmpty } from '@hnordt/reax-validator';
+import React from 'react'
+import { reduxForm } from 'redux-form'
+import Panel from '@hnordt/reax-panel'
+import PanelBody from '@hnordt/reax-panel-body'
+import Form from '@hnordt/reax-form'
+import FormGroup from '@hnordt/reax-form-group'
+import Label from '@hnordt/reax-label'
+import TextInput from '@hnordt/reax-text-input'
+import Button from '@hnordt/reax-button'
+import Spinner from '@hnordt/reax-spinner'
+import { isEmpty } from '@hnordt/reax-validator'
 
 const ProjectForm = ({
   fields: { name },
@@ -19,8 +19,8 @@ const ProjectForm = ({
   <Panel title="Add Project">
     <PanelBody>
       <Form onSubmit={handleSubmit(() => {
-        alert('Form validation succeeded');
-        resetForm();
+        alert('Form validation succeeded')
+        resetForm()
       })}>
         <FormGroup error={name.touched && name.error}>
           <Label>Name</Label>
@@ -32,7 +32,7 @@ const ProjectForm = ({
       </Form>
     </PanelBody>
   </Panel>
-);
+)
 
 export default reduxForm(
   {
@@ -42,4 +42,4 @@ export default reduxForm(
       name: isEmpty(name) && 'Required'
     })
   }
-)(ProjectForm);
+)(ProjectForm)

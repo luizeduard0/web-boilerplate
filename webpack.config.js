@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const webpack = require('webpack')
 
 module.exports = {
   entry: './src/index.js',
@@ -24,4 +24,4 @@ module.exports = {
       __DEV__: process.env.BUILD_DEV
     })
   ]
-};
+}

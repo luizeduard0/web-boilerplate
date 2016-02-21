@@ -1,7 +1,7 @@
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import createLogger from 'redux-logger';
-import rootReducer from './rootReducer';
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import createLogger from 'redux-logger'
+import rootReducer from './rootReducer'
 
 const store = createStore(
   rootReducer,
@@ -12,6 +12,6 @@ const store = createStore(
       predicate: () => __DEV__
     })
   )
-);
+)
 
-export default store;
+export default store

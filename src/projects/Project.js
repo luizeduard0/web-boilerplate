@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes } from 'react'
 
 const Project = ({
   name,
@@ -8,11 +8,11 @@ const Project = ({
     <td>{name}</td>
     <td>{version}</td>
   </tr>
-);
+)
 
 Project.propTypes = {
   name: PropTypes.string.isRequired,
   version: PropTypes.string.isRequired
-};
+}
 
-export default Project;
+export default Project

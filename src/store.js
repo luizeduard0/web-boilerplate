@@ -13,7 +13,7 @@ const store = createStore(
         predicate: () => process.env.NODE_ENV !== 'production'
       })
     ),
-    devToolsExtension ? devToolsExtension() : f => f
+    window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 )
 

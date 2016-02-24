@@ -14,8 +14,8 @@
   },
   "scripts": {
     "postinstall": "cross-env NODE_ENV=production webpack -p",
-    "start": "cross-env NODE_ENV=production node server.js",
-    "start-dev": "cross-env NODE_ENV=development webpack-dev-server --content-base public/ --inline --history-api-fallback"
+    "start": "cross-env NODE_ENV=production node server",
+    "start-dev": "cross-env NODE_ENV=development webpack-dev-server --content-base server/public/ --inline --history-api-fallback"
   },
   "dependencies": {
     "@hnordt/reax-alert": "^1.0.2",

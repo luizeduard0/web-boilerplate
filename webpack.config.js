@@ -1,9 +1,9 @@
 const webpack = require('webpack')
 
 module.exports = {
-  entry: './src',
+  entry: './client',
   output: {
-    path: './public',
+    path: './server/public',
     filename: 'index.js'
   },
   module: {

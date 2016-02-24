@@ -1,7 +1,8 @@
 import React from 'react'
-import { Router, browserHistory } from 'react-router'
+import { Router } from 'react-router'
+import history from './history'
 import routes from './routes'
 
-const router = <Router history={browserHistory} routes={routes} />
+const router = <Router history={history} routes={routes} />
 
 export default router

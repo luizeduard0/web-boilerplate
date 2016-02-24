@@ -2,24 +2,14 @@
 
 Boilerplate for React/Redux
 
-## Install
+## Installation
 
-```sh
-npm install -g webpack webpack-dev-server
-npm install
-```
+`npm install`
 
-## Build
+## Running Production Server
 
-### Production
+`npm run start`
 
-```sh
-NODE_ENV=production webpack -p
-PORT=3000 node server.js
-```
+## Running Development Server
 
-### Development
-
-```sh
-webpack-dev-server --content-base public/ --inline --history-api-fallback --port 3000
-```
+`npm run start-dev`

@@ -1,6 +1,6 @@
-# Reax Redux Boilerplate
+# React Redux Boilerplate
 
-Redux boilerplate for React
+Boilerplate for React/Redux
 
 ## Install
 

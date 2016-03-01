@@ -1,16 +1,16 @@
 {
-  "name": "@hnordt/react-redux-boilerplate",
+  "name": "@hnordt/reax-boilerplate",
   "version": "6.0.0",
   "description": "Boilerplate for React/Redux",
-  "homepage": "https://hnordt.github.io/react-redux-boilerplate",
+  "homepage": "https://hnordt.github.io/reax-boilerplate",
   "bugs": {
-    "url": "https://github.com/hnordt/react-redux-boilerplate/issues"
+    "url": "https://github.com/hnordt/reax-boilerplate/issues"
   },
   "license": "MIT",
   "author": "Héliton Nordt <hnordt@hnordt.com> (https://github.com/hnordt)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hnordt/react-redux-boilerplate.git"
+    "url": "https://github.com/hnordt/reax-boilerplate.git"
   },
   "scripts": {
     "postinstall": "cross-env NODE_ENV=production webpack -p",

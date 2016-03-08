@@ -1,6 +1,6 @@
 {
-  "name": "@hnordt/reax-boilerplate",
-  "version": "6.0.0",
+  "name": "reax-boilerplate",
+  "version": "7.0.0",
   "description": "Boilerplate for React/Redux",
   "bugs": {
     "url": "https://github.com/hnordt/reax-boilerplate/issues"
@@ -17,14 +17,12 @@
     "start-dev": "cross-env NODE_ENV=development webpack-dev-server --content-base server/public/ --inline --history-api-fallback"
   },
   "dependencies": {
-    "@hnordt/reax-alert": "^1.0.2",
-    "@hnordt/reax-container": "^1.0.0",
     "express": "^4.13.4",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.0",
     "react-router": "^2.0.0",
-    "react-router-redux": "^4.0.0",
+    "reax-commons": "0.0.16",
     "redux": "^3.3.1",
     "redux-form": "^4.2.0",
     "redux-logger": "^2.5.2",

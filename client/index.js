@@ -1,4 +1,5 @@
-import { render } from 'react-dom'
-import provider from './provider'
+import bootstrap from 'reax-commons/lib/utils/bootstrap'
+import reducers from './reducers'
+import routes from './routes'
 
-render(provider, document.getElementById('app'))
+bootstrap(reducers, routes)

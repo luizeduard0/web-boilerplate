@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
+import { reset } from 'redux-form'
 import Panel from 'reax-commons/lib/components/Panel'
 import PanelHeading from 'reax-commons/lib/components/PanelHeading'
 import PanelTitle from 'reax-commons/lib/components/PanelTitle'
 import PanelBody from 'reax-commons/lib/components/PanelBody'
 import { connect } from 'react-redux'
 import PostForm from '../components/PostForm'
-import { reset } from 'redux-form'
 import { createPost, updatePost } from '../api'
 import { getPosts } from '../'
 

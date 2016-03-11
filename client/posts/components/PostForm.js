@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import Form from 'reax-commons/lib/components/Form'
 import FormGroup from 'reax-commons/lib/components/FormGroup'
 import Label from 'reax-commons/lib/components/Label'

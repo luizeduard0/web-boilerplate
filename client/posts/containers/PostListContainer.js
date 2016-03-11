@@ -29,6 +29,4 @@ function mapStateToProps({ posts }) {
   return { posts }
 }
 
-const mapDispatchToProps = { getPosts }
-
-export default connect(mapStateToProps, mapDispatchToProps)(PostListContainer)
+export default connect(mapStateToProps, { getPosts })(PostListContainer)

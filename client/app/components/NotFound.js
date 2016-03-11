@@ -1,9 +1,6 @@
 import React from 'react'
+import Alert from 'reax-commons/lib/components/Alert'
 
 export default function NotFound() {
-  return (
-    <div className="alert alert-danger">
-      Not Found
-    </div>
-  )
+  return <Alert type="danger">Not Found</Alert>
 }

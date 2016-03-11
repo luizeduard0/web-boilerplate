@@ -8,9 +8,7 @@ const routes = [
     path: '/',
     component: App,
     indexRoute: {
-      onEnter: (nextState, replace) => {
-        replace('/posts')
-      }
+      onEnter: (nextState, replace) => replace('/posts')
     },
     childRoutes: [
       {

@@ -1,6 +1,6 @@
 {
   "name": "reax-boilerplate",
-  "version": "7.0.2",
+  "version": "8.0.0",
   "description": "Boilerplate for React/Redux",
   "bugs": {
     "url": "https://github.com/hnordt/reax-boilerplate/issues"
@@ -12,9 +12,9 @@
     "url": "https://github.com/hnordt/reax-boilerplate.git"
   },
   "scripts": {
-    "postinstall": "cross-env NODE_ENV=production webpack -p",
+    "postinstall": "cross-env NODE_ENV=production API_ROOT=http://jsonplaceholder.typicode.com webpack -p",
     "start": "cross-env NODE_ENV=production node server",
-    "start-dev": "cross-env NODE_ENV=development webpack-dev-server --content-base server/public/ --inline --history-api-fallback"
+    "start-dev": "cross-env NODE_ENV=development API_ROOT=http://jsonplaceholder.typicode.com webpack-dev-server --content-base server/public/ --inline --history-api-fallback"
   },
   "dependencies": {
     "express": "^4.13.4",
@@ -22,10 +22,11 @@
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.0",
     "react-router": "^2.0.0",
-    "reax-commons": "0.0.26",
+    "reax-commons": "0.0.32",
     "redux": "^3.3.1",
     "redux-form": "^4.2.0",
-    "redux-thunk": "^1.0.3"
+    "redux-thunk": "^1.0.3",
+    "whatwg-fetch": "^0.11.0"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",

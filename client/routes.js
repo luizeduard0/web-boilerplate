@@ -1,7 +1,7 @@
-import App from './app/components/App'
-import Posts from './posts/components/Posts'
-import PostFormContainer from './posts/containers/PostFormContainer'
-import NotFound from './app/components/NotFound'
+import App from './modules/app/components/App'
+import Posts from './modules/post/components/Posts'
+import PostFormContainer from './modules/post/containers/PostFormContainer'
+import NotFound from './modules/app/components/NotFound'
 
 const routes = [
   {

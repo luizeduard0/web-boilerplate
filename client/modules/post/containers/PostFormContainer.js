@@ -6,19 +6,15 @@ import PanelTitle from 'reax-commons/lib/components/PanelTitle'
 import PanelBody from 'reax-commons/lib/components/PanelBody'
 import { connect } from 'react-redux'
 import PostForm from '../components/PostForm'
-import { createPost, updatePost } from '../api'
 import { getPosts } from '../'
 
 class PostFormContainer extends Component {
   handleSubmit({ title, body }) {
     const { params, dispatch } = this.props
     if (params.id) {
-      return updatePost(params.id, title, body)
+      return
     }
-    return createPost(title, body).then(() => {
-      dispatch(getPosts())
-      dispatch(reset('post'))
-    })
+    return dispatch(reset('post'))
   }
   render() {
     const { post, onSubmit } = this.props
@@ -37,9 +33,9 @@ class PostFormContainer extends Component {
   }
 }
 
-function mapStateToProps({ posts }, { params }) {
+function mapStateToProps({ post }, { params }) {
   return {
-    post: posts.data && posts.data.find(({ id }) => id === Number(params.id))
+    post: post.posts && post.posts.find(({ id }) => id === Number(params.id))
   }
 }
 

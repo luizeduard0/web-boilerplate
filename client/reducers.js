@@ -1,5 +1,5 @@
-import posts from './posts'
+import post from './modules/post'
 
-const reducers = { posts }
+const reducers = { post }
 
 export default reducers

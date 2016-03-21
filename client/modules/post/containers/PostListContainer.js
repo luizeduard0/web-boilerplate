@@ -12,21 +12,23 @@ class PostListContainer extends Component {
   }
   render() {
     const { posts } = this.props
-    if (posts.loading) {
+    if (!posts) {
       return <Spinner />
     }
-    if (posts.error) {
+    if (posts instanceof Error) {
       return <Alert type="danger">Failed to load posts</Alert>
     }
-    if (!posts.data) {
+    if (posts.length === 0) {
       return <Alert type="warning">No posts found</Alert>
     }
-    return <PostList posts={posts.data} />
+    return <PostList posts={posts} />
   }
 }
 
-function mapStateToProps({ posts }) {
-  return { posts }
+function mapStateToProps({ post }) {
+  return {
+    posts: post.posts
+  }
 }
 
 export default connect(mapStateToProps, { getPosts })(PostListContainer)

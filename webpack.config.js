@@ -1,9 +1,9 @@
 const webpack = require('webpack')
 
 module.exports = {
-  entry: './client',
+  entry: __dirname + '/client',
   output: {
-    path: './server/public',
+    path: __dirname + '/server/public',
     filename: 'index.js'
   },
   module: {
@@ -21,8 +21,8 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-      'process.env.API_ROOT': JSON.stringify(process.env.API_ROOT)
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+      'process.env.API_ROOT': JSON.stringify(process.env.API_ROOT || '')
     })
   ]
 }

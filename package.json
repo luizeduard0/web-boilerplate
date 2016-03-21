@@ -1,6 +1,6 @@
 {
   "name": "reax-boilerplate",
-  "version": "10.0.0",
+  "version": "11.0.0",
   "description": "Boilerplate for React/Redux",
   "bugs": {
     "url": "https://github.com/hnordt/reax-boilerplate/issues"
@@ -12,11 +12,16 @@
     "url": "https://github.com/hnordt/reax-boilerplate.git"
   },
   "scripts": {
-    "postinstall": "cross-env NODE_ENV=production API_ROOT=http://jsonplaceholder.typicode.com webpack -p",
-    "start": "cross-env NODE_ENV=production node server",
-    "start-dev": "cross-env NODE_ENV=development API_ROOT=http://jsonplaceholder.typicode.com webpack-dev-server --content-base server/public/ --inline --history-api-fallback"
+    "postinstall": "webpack -p",
+    "start": "node server",
+    "start-dev": "node server | webpack -d --watch"
   },
   "dependencies": {
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.3",
+    "babel-plugin-transform-object-rest-spread": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
     "body-parser": "^1.15.0",
     "compression": "^1.6.1",
     "feathers": "^2.0.0",
@@ -33,17 +38,8 @@
     "redux": "^3.3.1",
     "redux-form": "^4.2.0",
     "redux-thunk": "^1.0.3",
-    "whatwg-fetch": "^0.11.0"
-  },
-  "devDependencies": {
-    "babel-core": "^6.5.1",
-    "babel-loader": "^6.2.3",
-    "babel-plugin-transform-object-rest-spread": "^6.5.0",
-    "babel-preset-es2015": "^6.5.0",
-    "babel-preset-react": "^6.5.0",
-    "cross-env": "^1.0.7",
     "webpack": "^1.12.13",
-    "webpack-dev-server": "^1.14.1"
+    "whatwg-fetch": "^0.11.0"
   },
   "private": true
 }

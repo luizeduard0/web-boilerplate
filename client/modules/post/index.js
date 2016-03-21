@@ -26,21 +26,7 @@ export function getPosts() {
   return {
     type: GET_POSTS,
     request: {
-      path: '/posts'
-    }
-  }
-}
-
-export function createPost(title, body) {
-  return {
-    type: CREATE_POST,
-    request: {
-      path: '/posts',
-      method: 'POST',
-      body: {
-        title,
-        body
-      }
+      path: 'http://jsonplaceholder.typicode.com/posts'
     }
   }
 }

@@ -1,5 +1,5 @@
-const feathers = require('feathers');
-const api = require('./api');
+const feathers = require('feathers')
+const api = require('./api')
 
 feathers()
   .use(feathers.static(__dirname + '/public'))

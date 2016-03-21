@@ -16,7 +16,8 @@ const messageService = service({
 
 messageService.before = {
   create(hook) {
-    hook.data.createdAt = new Date()
+    hook.data.createdAt = Date.now()
+    hook.data.text = hook.data.text.substring(0, 400)
   }
 }
 

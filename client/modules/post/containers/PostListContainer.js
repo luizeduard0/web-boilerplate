@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Spinner from 'reax-commons/lib/components/Spinner'
-import Alert from 'reax-commons/lib/components/Alert'
+import Spinner from 'reax-commons/client/components/Spinner'
+import Alert from 'reax-commons/client/components/Alert'
 import { connect } from 'react-redux'
 import PostList from '../components/PostList'
 import { getPosts } from '../'

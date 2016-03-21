@@ -1,4 +1,4 @@
-import bootstrap from 'reax-commons/lib/utils/bootstrap'
+import bootstrap from 'reax-commons/client/utils/bootstrap'
 import reducers from './reducers'
 import middlewares from './middlewares'
 import routes from './routes'

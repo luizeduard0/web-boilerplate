@@ -26,7 +26,6 @@ function restrictToSender(hook) {
   })
 }
 
-
 messageService.before = {
   all: [
     auth.hooks.verifyToken(),
@@ -41,12 +40,12 @@ messageService.before = {
     }
   },
   update: [
-    hooks.remove('sentBy'),
-    restrictToSender
+    restrictToSender,
+    hooks.remove('sentBy')
   ],
   patch: [
-    hooks.remove('sentBy'),
-    restrictToSender
+    restrictToSender,
+    hooks.remove('sentBy')
   ],
   remove: restrictToSender
 }

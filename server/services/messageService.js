@@ -1,8 +1,8 @@
 const NeDB = require('nedb')
 const service = require('feathers-nedb')
+const errors = require('feathers-errors')
 const auth = require('feathers-authentication')
 const hooks = require('feathers-hooks')
-const errors = require('feathers-errors')
 
 const db = new NeDB({
   filename: __dirname + '/../data/messages.db',
@@ -52,10 +52,7 @@ messageService.before = {
 }
 
 messageService.after = {
-  create: hooks.populate('sentBy', {
-    service: 'users',
-    field: 'userId'
-  })
+  create: hooks.populate('sentBy', { service: 'users', field: 'userId' })
 }
 
 module.exports = messageService

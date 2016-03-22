@@ -3,4 +3,4 @@ import reducers from './reducers'
 import middlewares from './middlewares'
 import routes from './routes'
 
-bootstrap(reducers, middlewares, routes)
+bootstrap({ reducers, middlewares, routes })

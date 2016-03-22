@@ -12,9 +12,8 @@
     "url": "https://github.com/hnordt/reax-boilerplate.git"
   },
   "scripts": {
-    "postinstall": "webpack -p",
-    "start": "node server",
-    "start-dev": "node server | webpack -d --watch"
+    "start": "webpack -p && node server",
+    "start-dev": "nodemon server | webpack -d --watch"
   },
   "dependencies": {
     "babel-core": "^6.5.1",
@@ -25,6 +24,7 @@
     "body-parser": "^1.15.0",
     "compression": "^1.6.1",
     "feathers": "^2.0.0",
+    "feathers-authentication": "^0.5.1",
     "feathers-hooks": "^1.5.0",
     "feathers-nedb": "^2.2.2",
     "feathers-rest": "^1.2.4",
@@ -34,12 +34,15 @@
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.0",
     "react-router": "^2.0.0",
-    "reax-commons": "0.0.38",
+    "reax-commons": "0.0.42",
     "redux": "^3.3.1",
     "redux-form": "^4.2.0",
     "redux-thunk": "^1.0.3",
     "webpack": "^1.12.13",
     "whatwg-fetch": "^0.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.1"
   },
   "private": true
 }

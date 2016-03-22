@@ -1,5 +1,7 @@
 const NeDB = require('nedb')
 const service = require('feathers-nedb')
+const auth = require('feathers-authentication')
+const hooks = require('feathers-hooks')
 const errors = require('feathers-errors')
 
 const db = new NeDB({
@@ -15,13 +17,8 @@ const messageService = service({
   }
 })
 
-function process(hook) {
-  hook.data.createdAt = Date.now()
-  hook.data.text = hook.data.text.substring(0, 400)
-}
-
 function restrictToSender(hook) {
-  return hook.app.service('messages').get(hook.id, hook.params).then(message => { // TODO: test hook.params
+  return hook.app.service('messages').get(hook.id, hook.params).then(message => {
     if (message.sentBy._id !== hook.params.user._id) {
       throw new errors.Forbidden()
     }
@@ -29,9 +26,36 @@ function restrictToSender(hook) {
   })
 }
 
+
 messageService.before = {
-  create: process,
+  all: [
+    auth.hooks.verifyToken(),
+    auth.hooks.populateUser(),
+    auth.hooks.requireAuth()
+  ],
+  create(hook) {
+    hook.data = {
+      userId: hook.params.user._id,
+      createdAt: Date.now(),
+      text: hook.data.text.substring(0, 400)
+    }
+  },
+  update: [
+    hooks.remove('sentBy'),
+    restrictToSender
+  ],
+  patch: [
+    hooks.remove('sentBy'),
+    restrictToSender
+  ],
   remove: restrictToSender
+}
+
+messageService.after = {
+  create: hooks.populate('sentBy', {
+    service: 'users',
+    field: 'userId'
+  })
 }
 
 module.exports = messageService

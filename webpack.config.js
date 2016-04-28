@@ -13,16 +13,15 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          presets: ['es2015', 'react'],
-          plugins: ['transform-object-rest-spread']
+          presets: ['es2015', 'stage-1', 'react'],
+          plugins: ['transform-decorators-legacy']
         }
       }
     ]
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-      'process.env.API_ROOT': JSON.stringify(process.env.API_ROOT || '')
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     })
   ]
 }

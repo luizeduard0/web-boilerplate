@@ -1,6 +1,8 @@
-import bootstrap from 'reax-commons/client/utils/bootstrap'
-import reducers from './reducers'
-import middlewares from './middlewares'
+import React from 'react'
+import { Router, browserHistory } from 'react-router'
 import routes from './routes'
+import { render } from 'react-dom'
 
-bootstrap({ reducers, middlewares, routes })
+const router = <Router history={browserHistory} routes={routes} />
+
+render(router, document.getElementById('app'))

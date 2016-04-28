@@ -1,17 +1,19 @@
 import React, { PropTypes } from 'react'
-import Header from './Header'
 
 export default function App({ children }) {
   return (
-    <div>
-      <div className="container">
-        <Header />
-        {children}
-      </div>
+    <div className="container" style={styles.container}>
+      {children}
     </div>
   )
 }
 
 App.propTypes = {
   children: PropTypes.node.isRequired
+}
+
+const styles = {
+  container: {
+    paddingTop: 20
+  }
 }

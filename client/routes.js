@@ -1,29 +1,14 @@
-import App from './modules/app/components/App'
-import Posts from './modules/post/components/Posts'
-import PostFormContainer from './modules/post/containers/PostFormContainer'
-import NotFound from './modules/app/components/NotFound'
+import App from './App'
+import NotFound from './NotFound'
 
 const routes = [
   {
     path: '/',
     component: App,
     indexRoute: {
-      onEnter: (nextState, replace) => replace('/posts')
+      component: NotFound
     },
     childRoutes: [
-      {
-        path: 'posts',
-        component: Posts,
-        indexRoute: {
-          component: PostFormContainer
-        },
-        childRoutes: [
-          {
-            path: ':id/edit',
-            component: PostFormContainer
-          }
-        ]
-      },
       {
         path: '*',
         component: NotFound

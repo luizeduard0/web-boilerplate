@@ -1,4 +1,5 @@
+.DS_Store
 node_modules
-server/data
+npm-debug.log
 server/public/index.js
 server/public/index.js.map

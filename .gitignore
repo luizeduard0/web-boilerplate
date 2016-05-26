@@ -1,5 +1,5 @@
 .DS_Store
+dist/index.js
+dist/index.js.map
 node_modules
 npm-debug.log
-server/public/index.js
-server/public/index.js.map

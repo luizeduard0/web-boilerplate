@@ -1,9 +1,12 @@
 const webpack = require('webpack')
 
 module.exports = {
-  entry: __dirname + '/client',
+  entry: [
+    'babel-polyfill',
+    __dirname + '/src'
+  ],
   output: {
-    path: __dirname + '/server/public',
+    path: __dirname + '/dist',
     filename: 'index.js'
   },
   module: {

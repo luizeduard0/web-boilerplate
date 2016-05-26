@@ -1,5 +1,5 @@
-import App from './App'
-import NotFound from './NotFound'
+import App from './components/App'
+import NotFound from './components/NotFound'
 
 const routes = [
   {
